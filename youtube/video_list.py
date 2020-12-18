@@ -9,6 +9,7 @@ source = open('body.txt', 'r', encoding='UTF-8')
 soup = BeautifulSoup(source, 'html.parser')
 items = soup.select('a#video-title')
 
+number_list = []
 title_list = []
 cover_list = []
 link_list = []
@@ -16,13 +17,17 @@ id_list = []
 view_count_list = []
 
 for video in items:
-    title = video.attrs['title'].replace('  ', ' ')
-    dot_i = title.find('.')
+    title = video.attrs['title'].replace('  ', ' ').strip()
+    first_space_i = min(title.find(' '), title.find('.'))
+    number = title[:first_space_i]
+    if number[-1] == '.':
+        number = number[:-1]
     try:
-        int(title[:dot_i])
+        int(number)
     except ValueError:
-        print(f'Ignore {title}')
-        continue
+        print(f'Check!!! {title}')
+
+    title = title[first_space_i + 1:].strip()
 
     raw_text = video.attrs['aria-label']
     raw_text = raw_text.replace('  ', ' ')
@@ -36,6 +41,7 @@ for video in items:
     cover = f'http://img.youtube.com/vi/{video_id}/sddefault.jpg'
     link = f'https://www.youtube.com/watch?v={video_id}'
 
+    number_list.append(number)
     title_list.append(title)
     cover_list.append(cover)
     link_list.append(link)
@@ -43,6 +49,7 @@ for video in items:
     view_count_list.append(view_count)
 
 df = DataFrame({
+    "Number": number_list,
     "Name": title_list,
     "Cover": cover_list,
     "Link": link_list,
