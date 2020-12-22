@@ -4,4 +4,6 @@ body.txt
 client_secret.json
 *.csv
 
+__pycache__
+
 temp.py
