@@ -3,7 +3,8 @@ import pandas as pd
 df = pd.read_csv('raw_input.csv')
 # print(df)
 
-id_str = '1,2,3'
+id_str = '75, 83, 112'
+id_str.replace(' ', '')
 id_list = id_str.split(',')
 
 filtered_df = df[df['Number'].isin(id_list)]

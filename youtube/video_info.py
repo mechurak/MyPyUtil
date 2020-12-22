@@ -47,6 +47,8 @@ def main():
     view_count_list = []
     like_count_list = []
     comment_count_list = []
+    description_list = []
+    tag_list = []
 
     while id_list:
         cur_list = id_list[:50]  # id 최대 50개 조회 가능 (50개 넘으면 400 에러)
@@ -67,6 +69,9 @@ def main():
             view_count = int(item['statistics']['viewCount'])
             like_count = int(item['statistics']['likeCount'])
             comment_count = int(item['statistics']['commentCount'])
+            description = item['snippet']['description']
+            tags = item['snippet'].get('tags', [])
+            tag_str = ','.join(tags)
 
             video_id_list.append(video_id)
             title_list.append(title)
@@ -76,6 +81,8 @@ def main():
             view_count_list.append(view_count)
             like_count_list.append(like_count)
             comment_count_list.append(comment_count)
+            description_list.append(description)
+            tag_list.append(tag_str)
 
         id_list = id_list[len(cur_list):]
 
@@ -88,6 +95,8 @@ def main():
         "View": view_count_list,
         "Like": like_count_list,
         "Comment": comment_count_list,
+        "Description": description_list,
+        "Tags": tag_list
     })
     print(df)
     df.to_csv('output.csv', header=True, index=False)

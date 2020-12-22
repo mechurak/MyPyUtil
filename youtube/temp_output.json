@@ -1,0 +1,96 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "MjJg4Cx278zagxItgvhE7-AXJD8",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "SG2bC27rFstAfNQHqRGaByMo8OM",
+      "id": "cq5I8MSN4-w",
+      "snippet": {
+        "publishedAt": "2020-12-11T09:00:29Z",
+        "channelId": "UCSWPuzlD337Y6VBkyFPwT8g",
+        "title": "451. (왕초보) FIRE? 애, 차, 개 아웃? 조선일보 기사 부연설명!",
+        "description": "제 기사가 최근에 조선일보에 실렸는데 - 애, 차, 개 OUT이라는 멋진 제목을 달아 주셨습니다!\n정말 애, 차, 개는 가지면 안되는 걸까요? FIRE는 무엇이고 행복은 무엇일까요?\n\n#조선일보기사 #FIRE #경제적자유 #애차개아웃 #40세은퇴 #행복 #자아실현 #한국인의정석 #인간관계 #4%룰 #연지출25배 #3억은퇴가능 #강환국 #할투 #헤이비트 \n\n관련 기사: 조선일보(유종헌 기자) - ‘애·차·개’ OUT… 우리는 30대에 은퇴한다https://www.chosun.com/national/weekend/2020/12/05/MSPBR2NJUNCT3JSBMORG6Z6N2M/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cq5I8MSN4-w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cq5I8MSN4-w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cq5I8MSN4-w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cq5I8MSN4-w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cq5I8MSN4-w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "할 수 있다! 알고 투자",
+        "tags": [
+          "조선일보 기사",
+          "FIRE",
+          "경제적 자유",
+          "애 차 개 아웃",
+          "40세 은퇴",
+          "행복",
+          "자아실현",
+          "한국인의 정석",
+          "인간관계",
+          "4% 규칙",
+          "연 지출 25배",
+          "3억 은퇴 가능",
+          "강환국",
+          "할투",
+          "헤이비트",
+          "할 수 있다! 퀀트투자",
+          "할 수 있다! 알고투자",
+          "주식",
+          "투자",
+          "퀀트",
+          "퀀트투자",
+          "주식투자"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "451. (왕초보) FIRE? 애, 차, 개 아웃? 조선일보 기사 부연설명!",
+          "description": "제 기사가 최근에 조선일보에 실렸는데 - 애, 차, 개 OUT이라는 멋진 제목을 달아 주셨습니다!\n정말 애, 차, 개는 가지면 안되는 걸까요? FIRE는 무엇이고 행복은 무엇일까요?\n\n#조선일보기사 #FIRE #경제적자유 #애차개아웃 #40세은퇴 #행복 #자아실현 #한국인의정석 #인간관계 #4%룰 #연지출25배 #3억은퇴가능 #강환국 #할투 #헤이비트 \n\n관련 기사: 조선일보(유종헌 기자) - ‘애·차·개’ OUT… 우리는 30대에 은퇴한다https://www.chosun.com/national/weekend/2020/12/05/MSPBR2NJUNCT3JSBMORG6Z6N2M/"
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "contentDetails": {
+        "duration": "PT12M37S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "6027",
+        "likeCount": "381",
+        "dislikeCount": "6",
+        "favoriteCount": "0",
+        "commentCount": "99"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 1
+  }
+}
