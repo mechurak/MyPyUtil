@@ -33,6 +33,7 @@ def get_lecture(li: bs4.element.Tag) -> dict:
     span_date = li.div.find("span", {"class": "date_info"})
     span_date_temp_strings = list(span_date.stripped_strings)
     date = span_date_temp_strings[-1]
+    date = date.replace(".", "-")
 
     return {
         "title": title,

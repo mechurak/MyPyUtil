@@ -25,17 +25,17 @@ def main(the_args):
     url_count = the_args.count
 
     lectures = lecture_list.get_lecture_list(target_page)
-    target_lectures = reversed(lectures[:url_count])
+    target_lectures = reversed(lectures[:url_count]) if url_count > 0 else reversed(lectures)
 
     for lecture in target_lectures:
         video_url = get_video_url(lecture["lecture_id"])
-        print(f'{lecture["title"]} | {lecture["date"]} | {video_url}')
+        print(f'{lecture["date"]},{lecture["title"]},{video_url}')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--page", default=1, help="target page number", type=int)
-    parser.add_argument("-c", "--count", default=3, help="the number of videos to fetch url", type=int)
+    parser.add_argument("-c", "--count", default=-1, help="the number of videos to fetch url (-1: all)", type=int)
 
     args = parser.parse_args()
     main(args)
