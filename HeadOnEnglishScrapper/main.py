@@ -29,7 +29,7 @@ def main(the_args):
 
     for lecture in target_lectures:
         video_url = get_video_url(lecture["lecture_id"])
-        print(f'{lecture["date"]},{lecture["title"]},{video_url}')
+        print(f'{lecture["date"]},{video_url},{lecture["title"]}')
 
 
 if __name__ == "__main__":

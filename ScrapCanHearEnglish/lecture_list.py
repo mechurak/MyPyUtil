@@ -46,7 +46,7 @@ def get_lecture(li: bs4.element.Tag) -> dict:
     remote_url = f"https://www.bookdonga.com/utility/download.donga?type=EXTRADATAFILE&fieldname=listen_flnm&data_seq={data_seq}&part_seq={part_seq}"
     # print(f"remote_url: {remote_url}")
 
-    print(f"{date},{title},{remote_url}")
+    print(f"{date},{remote_url},{title}")
     return {
         "title": title,
         "date": date,
