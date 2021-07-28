@@ -35,7 +35,7 @@ def main(the_args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--page", default=1, help="target page number", type=int)
-    parser.add_argument("-c", "--count", default=-1, help="the number of videos to fetch url (-1: all)", type=int)
+    parser.add_argument("-c", "--count", default=3, help="the number of videos to fetch url (-1: all)", type=int)
 
     args = parser.parse_args()
     main(args)
