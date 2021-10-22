@@ -2,7 +2,8 @@
 
 body.txt
 client_secret.json
-*.csv
+temp.csv
+output.csv
 
 __pycache__
 

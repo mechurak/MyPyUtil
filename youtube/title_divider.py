@@ -31,6 +31,7 @@ def real_title(raw_title):
 
 df['Number'] = df['Title'].map(real_number)
 df['RealTitle'] = df['Title'].map(real_title)
+df['MarkdownLink'] = "[" + df['Title'] + "](" + df['Link'] + ")"
 
 df.to_csv('output2.csv', header=True, index=False)
 print('to_csv(). Done')

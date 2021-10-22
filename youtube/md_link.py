@@ -1,15 +1,17 @@
 import pandas as pd
 
-df = pd.read_csv('raw_input.csv')
+# TODO: Check 251, 262, 384
+
+df = pd.read_csv('output2.csv')
 # print(df)
 
-id_str = '75, 83, 112'
-id_str.replace(' ', '')
-id_list = id_str.split(',')
+number_str = '413, 430, 459, 463, 593'
+number_str = number_str.replace(' ', '')
+number_list = number_str.split(',')
 
-filtered_df = df[df['Number'].isin(id_list)]
+filtered_df = df[df['Number'].isin(number_list)]
 # print(filtered_df)
 
-for i in filtered_df.index:
-    print(f"- {filtered_df['md_link'][i]}")
-
+for number in number_list:
+    mask = filtered_df['Number'] == number
+    print(f"- {filtered_df[mask]['MarkdownLink'].values[0]}")
