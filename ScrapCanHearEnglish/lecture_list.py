@@ -58,6 +58,8 @@ def get_lecture(li: bs4.element.Tag) -> dict:
 
 if __name__ == "__main__":
     '''
+    입이 트이는 영어 2021/ 11월호    book_id: 31105
+    귀가 트이는 영어 2021/ 11월호    book_id: 31104
     입이 트이는 영어 2021/ 10월호    book_id: 31042
     귀가 트이는 영어 2021/ 10월호    book_id: 31041
     입이 트이는 영어 2021/ 9월호    book_id: 31000
@@ -77,4 +79,4 @@ if __name__ == "__main__":
     입이 트이는 영어 2021/ 2월호    book_id: 30566
     귀가 트이는 영어 2021/ 2월호    book_id: 30565
     '''
-    get_lecture_list(31042)
+    get_lecture_list(31105)
