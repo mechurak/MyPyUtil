@@ -8,3 +8,5 @@ output.csv
 __pycache__
 
 temp.py
+
+temp/
