@@ -11,8 +11,8 @@ sections = soup.select('.section--section--BukKG')
 # css-1o6lxsj 소제목
 
 for section in sections:
-    section_title = section.select_one('h3 > button > span > span').get_text().strip()
-    print(f'## === {section_title} ===')
+    section_title = section.select_one('button > span > span').get_text().strip()
+    print(f'## 📚 {section_title}')
     chapters = section.select('.curriculum-item-link--curriculum-item-title-content--1SLoR')
     for chapter in chapters:
         title = chapter.select_one('span > span').get_text().strip()  # ex) 'CHAPTER 1'
