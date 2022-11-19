@@ -7,7 +7,7 @@ from pandas import DataFrame
 
 source = open('body.txt', 'r', encoding='UTF-8')
 soup = BeautifulSoup(source, 'html.parser')
-items = soup.select('a#video-title')
+items = soup.select('a#video-title-link')
 
 number_list = []
 title_list = []
@@ -16,24 +16,33 @@ link_list = []
 id_list = []
 view_count_list = []
 
-for video in items:
+for i, video in enumerate(items):
     title = video.attrs['title'].replace('  ', ' ').strip()
-    first_space_i = min(title.find(' '), title.find('.'))
+    first_space_i = len(title) - 1
+    idx_space = title.find(' ')
+    if idx_space != -1 and idx_space < first_space_i:
+        first_space_i = idx_space
+    idx_dot = title.find('.')
+    if idx_dot != -1 and idx_dot < first_space_i:
+        first_space_i = idx_dot
     number = title[:first_space_i]
-    if number[-1] == '.':
-        number = number[:-1]
     try:
         int(number)
     except ValueError:
-        print(f'Check!!! {title}')
+        print(f'Skip!!! {title}')
+        print('number', number)
+        continue
 
     title = title[first_space_i + 1:].strip()
 
     raw_text = video.attrs['aria-label']
+    if i == 0:
+        print('raw_text', raw_text)
     raw_text = raw_text.replace('  ', ' ')
-    temp_i = raw_text.find('조회수')
-    view_count_str = raw_text[temp_i + 3:-1].replace(',', '')
-    view_count = int(view_count_str)
+    view_count = -1
+    # temp_i = raw_text.find('조회수')
+    # view_count_str = raw_text[temp_i + 3:-1].replace(',', '')
+    # view_count = int(view_count_str)
 
     href = video.attrs['href']  # '/watch?v=Y5HjRn0kvYs'
     video_id = href[9:]
